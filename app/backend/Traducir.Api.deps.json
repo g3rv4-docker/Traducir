@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "32e2d223b2ffdab8fbc263a7f5f4c1cb67bf34e9"
+    "signature": "53ba2ab25aa2f040225b3bbdfadc585428740144"
   },
   "compilationOptions": {
     "defines": [
@@ -26,8 +26,11 @@
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.NETCore.App": "2.0.0",
           "MiniProfiler.AspNetCore.Mvc": "4.0.0-alpha9-00206",
+          "Simple.Migrations": "0.9.19",
           "StackExchange.Exceptional.AspNetCore": "2.0.0-rc2.12",
-          "Traducir.Core": "1.0.0"
+          "System.Data.SqlClient": "4.4.2",
+          "Traducir.Core": "1.0.0",
+          "Traducir.Migrations": "1.0.0"
         },
         "runtime": {
           "Traducir.Api.dll": {}
@@ -2630,6 +2633,24 @@
           "lib/netstandard1.5/Sigil.dll": {}
         }
       },
+      "Simple.Migrations/0.9.19": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "System.Collections": "4.3.0",
+          "System.Console": "4.3.0",
+          "System.Data.Common": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Simple.Migrations.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Simple.Migrations.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.7": {
         "dependencies": {
           "SQLitePCLRaw.core": "1.1.7",
@@ -3926,6 +3947,18 @@
         },
         "compile": {
           "Traducir.Core.dll": {}
+        }
+      },
+      "Traducir.Migrations/1.0.0": {
+        "dependencies": {
+          "Simple.Migrations": "0.9.19",
+          "System.Data.SqlClient": "4.4.2"
+        },
+        "runtime": {
+          "Traducir.Migrations.dll": {}
+        },
+        "compile": {
+          "Traducir.Migrations.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -5456,6 +5489,13 @@
       "path": "sigil/4.7.0",
       "hashPath": "sigil.4.7.0.nupkg.sha512"
     },
+    "Simple.Migrations/0.9.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N0wCQpuBIN+ykD4dv6SrfcEYGP5VHIEuwF/I3BilV40sYUb1Hk2jgig8Xfx9SmLW7bqId7lgAfVLHRpdU5ybMQ==",
+      "path": "simple.migrations/0.9.19",
+      "hashPath": "simple.migrations.0.9.19.nupkg.sha512"
+    },
     "SQLitePCLRaw.bundle_green/1.1.7": {
       "type": "package",
       "serviceable": true,
@@ -6178,6 +6218,11 @@
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
     "Traducir.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Traducir.Migrations/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
