@@ -3,8 +3,8 @@ pipeline:
     image: g3rv4/docker
     commands:
       - "docker build -t g3rv4/traducir ."
-      - "docker-compose -f /var/traducir/docker-compose.yml stop"
-      - "docker-compose -f /var/traducir/docker-compose.yml rm -f"
+      - "docker stop traducir_traducir_1"
+      - "docker rm -f traducir_traducir_1"
       - "docker-compose -f /var/traducir/docker-compose.yml up -d"
       - "sleep 10"
       - "curl -X DELETE \"https://api.cloudflare.com/client/v4/zones/$${CLOUDFLARE_ZONE}/purge_cache\" -H \"X-Auth-Email: $${CLOUDFLARE_EMAIL}\" -H \"X-Auth-Key: $${CLOUDFLARE_KEY}\" -H \"Content-Type: application/json\" --data '{\"purge_everything\":true}'"
