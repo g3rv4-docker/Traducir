@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "53ba2ab25aa2f040225b3bbdfadc585428740144"
+    "signature": "819c39ddf4414fca8110dbd6377bdf15ab98cae0"
   },
   "compilationOptions": {
     "defines": [
@@ -37,6 +37,18 @@
         },
         "compile": {
           "Traducir.Api.dll": {}
+        }
+      },
+      "CsvHelper/7.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.0",
+          "System.Reflection.TypeExtensions": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CsvHelper.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/CsvHelper.dll": {}
         }
       },
       "Dapper/1.50.4": {
@@ -3934,6 +3946,7 @@
       },
       "Traducir.Core/1.0.0": {
         "dependencies": {
+          "CsvHelper": "7.1.0",
           "Dapper": "1.50.4",
           "Jil": "2.15.4",
           "Microsoft.Extensions.Configuration": "2.0.0",
@@ -4144,6 +4157,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CsvHelper/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H9+MtVj4P6oXaV/ODdYYFA20LFeIfIY77xL+nfFaPIzZy5YdbezzLvUPWX6Lm3BU/pzqXZCgzxO8vLh6+wCQWA==",
+      "path": "csvhelper/7.1.0",
+      "hashPath": "csvhelper.7.1.0.nupkg.sha512"
     },
     "Dapper/1.50.4": {
       "type": "package",
