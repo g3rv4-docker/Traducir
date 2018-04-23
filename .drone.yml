@@ -13,3 +13,7 @@ pipeline:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/gervasio/docker/traducir:/var/traducir
+    when:
+      when:
+        event: push
+        branch: master
