@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "819c39ddf4414fca8110dbd6377bdf15ab98cae0"
+    "signature": "81972cf029c944703bbabc53710a67b89eb26831"
   },
   "compilationOptions": {
     "defines": [
@@ -12,7 +12,7 @@
     "languageVersion": "",
     "platform": "",
     "allowUnsafe": false,
-    "warningsAsErrors": false,
+    "warningsAsErrors": true,
     "optimize": true,
     "keyFile": "",
     "emitEntryPoint": true,
@@ -24,10 +24,12 @@
       "Traducir.Api/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.3",
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.6.0",
           "Microsoft.NETCore.App": "2.0.0",
           "MiniProfiler.AspNetCore.Mvc": "4.0.0-alpha9-00206",
           "Simple.Migrations": "0.9.19",
           "StackExchange.Exceptional.AspNetCore": "2.0.0-rc2.12",
+          "StyleCop.Analyzers": "1.0.2",
           "System.Data.SqlClient": "4.4.2",
           "Traducir.Core": "1.0.0",
           "Traducir.Migrations": "1.0.0"
@@ -1495,6 +1497,14 @@
           "lib/netstandard1.3/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.0": {
+        "dependencies": {
+          "Microsoft.CodeQuality.Analyzers": "2.6.0",
+          "Microsoft.NetCore.Analyzers": "2.6.0",
+          "Microsoft.NetFramework.Analyzers": "2.6.0",
+          "Text.Analyzers": "2.6.0"
+        }
+      },
       "Microsoft.CodeAnalysis.Razor/2.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "2.0.1",
@@ -1508,6 +1518,7 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {}
         }
       },
+      "Microsoft.CodeQuality.Analyzers/2.6.0": {},
       "Microsoft.CSharp/4.4.0": {},
       "Microsoft.Data.Edm/5.8.2": {
         "runtime": {
@@ -2301,7 +2312,9 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "Microsoft.NetCore.Analyzers/2.6.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.NetFramework.Analyzers/2.6.0": {},
       "Microsoft.Rest.ClientRuntime/2.3.8": {
         "dependencies": {
           "NETStandard.Library": "2.0.0",
@@ -2796,6 +2809,7 @@
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
         }
       },
+      "StyleCop.Analyzers/1.0.2": {},
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -3930,6 +3944,7 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
+      "Text.Analyzers/2.6.0": {},
       "WindowsAzure.Storage/8.1.4": {
         "dependencies": {
           "Microsoft.Data.OData": "5.8.2",
@@ -3949,9 +3964,11 @@
           "CsvHelper": "7.1.0",
           "Dapper": "1.50.4",
           "Jil": "2.15.4",
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.6.0",
           "Microsoft.Extensions.Configuration": "2.0.0",
           "Microsoft.Extensions.Configuration.Binder": "2.0.0",
           "MiniProfiler.AspNetCore.Mvc": "4.0.0-alpha9-00206",
+          "StyleCop.Analyzers": "1.0.2",
           "System.Collections.Immutable": "1.4.0",
           "System.Data.SqlClient": "4.4.2"
         },
@@ -4823,12 +4840,26 @@
       "path": "microsoft.codeanalysis.csharp/2.3.1",
       "hashPath": "microsoft.codeanalysis.csharp.2.3.1.nupkg.sha512"
     },
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fXL2JWK8mJ4gnwG17mJYwB501mYy3kPI2XD6gbMdIbvGkfOZD/VLzvOkaWlYIEoaD+N4f1leMOFGAtV1GZ+oKw==",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.6.0",
+      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.6.0.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.Razor/2.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Ncqt6UEh5s451dZHPwTK8YDbl5t4isn0q1Xs3I2JTjUs4xdCOSo2t0KPeb1PUeNDrTJ0vKDV6xMtQf1uqiTjoQ==",
       "path": "microsoft.codeanalysis.razor/2.0.1",
       "hashPath": "microsoft.codeanalysis.razor.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.CodeQuality.Analyzers/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nSs2yuSHwpi741zfpOBkxC2h91MqUcFCU0U0XnE+A0VRKqOBbkRydlFF0eSiRRJaA6VAwdAPFIbSqzvor3cQ9w==",
+      "path": "microsoft.codequality.analyzers/2.6.0",
+      "hashPath": "microsoft.codequality.analyzers.2.6.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.4.0": {
       "type": "package",
@@ -5271,12 +5302,26 @@
       "path": "microsoft.net.http.headers/2.0.1",
       "hashPath": "microsoft.net.http.headers.2.0.1.nupkg.sha512"
     },
+    "Microsoft.NetCore.Analyzers/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MDJCn1S3AvLjTIIPbm1ZOZi9F3SmOCSPFGvtUlcymcX9OJYw/VMzo3lk2s7KXqSENbP6tmsUiY+c0FNWGW61IQ==",
+      "path": "microsoft.netcore.analyzers/2.6.0",
+      "hashPath": "microsoft.netcore.analyzers.2.6.0.nupkg.sha512"
+    },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NetFramework.Analyzers/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8R6TnUHBPB60uYOz3vBnocmq7Uqhq49Oi7Kp2uXWINO0M7cm090blPzKn6OdCIdOP1L+RlmV2YkY0hnKhPYBoA==",
+      "path": "microsoft.netframework.analyzers/2.6.0",
+      "hashPath": "microsoft.netframework.analyzers.2.6.0.nupkg.sha512"
     },
     "Microsoft.Rest.ClientRuntime/2.3.8": {
       "type": "package",
@@ -5578,6 +5623,13 @@
       "sha512": "sha512-qrfSB1BnmM17V20A4yvvNA0HNiDgnBd/CcjaeMKMA4qtup1uuBUMyhl20oj31fRVo71E/fXTbmQCuM9ytBJs6w==",
       "path": "stackexchange.redis.strongname/1.2.4",
       "hashPath": "stackexchange.redis.strongname.1.2.4.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3xD87lafnVhsSEtJKk50G7FGutvaXkFz4XrrLrxnk/DhZU42dnCGWUsvKuBv4mTS0XdIgTY88tLhxW/8Vi3Pow==",
+      "path": "stylecop.analyzers/1.0.2",
+      "hashPath": "stylecop.analyzers.1.0.2.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
@@ -6229,6 +6281,13 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Text.Analyzers/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OhgoJu18GveXoxoXqBJvj0WDfQdghrw+v2GdTnArZWfLqsP9lgmseYEKb5b1sIEvOBfzcnY6rGrz2eeKeVLs5Q==",
+      "path": "text.analyzers/2.6.0",
+      "hashPath": "text.analyzers.2.6.0.nupkg.sha512"
     },
     "WindowsAzure.Storage/8.1.4": {
       "type": "package",
