@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0.5-runtime-jessie
+FROM microsoft/dotnet:2.1.6-aspnetcore-runtime-stretch-slim
 
 RUN apt-get update && \
     apt-get install -y nginx supervisor && \
